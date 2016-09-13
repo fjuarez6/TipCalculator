@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         public void onTextChanged(CharSequence s, int start, int before, int count) {
 
             try {
-                double amount = Double.parseDouble(charSequence.toString()) / 100.0;
+                double amount = Double.parseDouble(s.toString()) / 100.0;
                 currentBill.setAmount(amount);
             }
 
