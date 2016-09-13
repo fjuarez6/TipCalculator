@@ -3,4 +3,5 @@
     <string name="enter_amount">Enter Amount...</string>
     <string name="Tip">Tip</string>
     <string name="Total">Total</string>
+    <string name="start_percent">20%</string>
 </resources>
