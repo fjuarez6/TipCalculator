@@ -57,14 +57,19 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-            try {
-                double amount = Double.parseDouble(s.toString()) / 100.0;
+            if (s == "")
+            {
+                double amount = 0.0;
                 currentBill.setAmount(amount);
             }
+            else {
 
-            catch (NumberFormatException e)
-            {
-                amountEditText.setText("");
+                try {
+                    double amount = Double.parseDouble(s.toString()) / 100.0;
+                    currentBill.setAmount(amount);
+                } catch (NumberFormatException e) {
+                    amountEditText.setText("");
+                }
             }
 
             //No exception, input is valid:
